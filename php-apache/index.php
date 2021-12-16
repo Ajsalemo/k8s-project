@@ -1,10 +1,5 @@
 <?php
-
-    // Change into the directory
-    chdir("/tmp");
-    // Create the directory named sessions
-    mkdir("sessions");
-    $login_session_save_path = '/tmp/sessions';
+    $login_session_save_path = '/tmp';
 
     session_save_path($login_session_save_path);
     session_start();
@@ -13,5 +8,6 @@
         $_SESSION['login'] = 'dummy';
     } else {
         echo ('SessionId: ' . $_COOKIE['PHPSESSID']);
+        echo ('<br/>');
         echo ('LoginUser: ' . $_SESSION['login']);
     }
