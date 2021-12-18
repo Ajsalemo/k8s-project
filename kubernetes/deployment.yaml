@@ -5,7 +5,8 @@ metadata:
   labels:
     app: php-apache
 spec:
-  replicas: 1
+  # Keep 5 replicas by default
+  replicas: 5
   selector:
     matchLabels:
       app: php-apache
